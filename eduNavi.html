@@ -1,0 +1,1121 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+
+
+
+
+
+
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8,IE=EmulateIE9,IE=edge" > -->
+	<title>교육데이터 NAVIGATION</title>
+	<meta name="description" content="" >
+	<meta name="author" content="" >
+<!-- 파비콘 -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/common/css/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/common/css/kedi.newbase.css" />
+<link rel="stylesheet" type="text/css" href="/common/css/kedi.newcommon.css" />
+<link rel="stylesheet" type="text/css" href="/common/css/kedi.newlayout.css" />
+
+<!-- 2022-04-25 -->
+<link rel="stylesheet" type="text/css" href="/common/css/slick.css" />
+<!-- //2022-04-25 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/common/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/common/js/jquery.blockUI.js"></script>
+
+<script type="text/javascript" src="/js/common-kedi.jsp" ></script>
+<script type="text/javascript" src="/js/jquery.bgiframe.min.js" ></script>
+<script type="text/javascript" src="/js/framework-2.2.2.js" ></script>
+<script type="text/javascript" src="/js/jquery-sv-0.1.js" ></script>
+
+<script type="text/javascript" src="/js/jquery.deserialize.js" ></script>
+<script type="text/javascript" src="/js/swfu/swfupload.js" ></script>
+<script type="text/javascript" src="/js/swfu/swfupload.queue.js" ></script>
+<script type="text/javascript" src="/js/swfu/fileprogress.js" ></script>
+<script type="text/javascript" src="/js/bbsbuilder/filehandlers.js" ></script>
+
+
+<script type="text/javascript" src="/js/bbsbuilder/jquery.metadata.js" ></script>
+
+
+<script type="text/javascript" src="/js/dtree.js "></script>
+
+<script type="text/javascript" src="/js/rsa/jsbn.js"></script>
+<script type="text/javascript" src="/js/rsa/rsa.js"></script>
+<script type="text/javascript" src="/js/rsa/prng4.js"></script>
+<script type="text/javascript" src="/js/rsa/rng.js"></script>
+
+<script type="text/javascript" src="/common/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/common/js/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery.modalLayer.js"></script>
+<script type="text/javascript" src="/common/js/respond.js"></script>
+<script type="text/javascript" src="/common/js/kedi.common.js"></script>
+<script type="text/javascript" src="/common/js/kedi.ui.js"></script>
+
+
+<!-- 2017-06-13 -->
+<script type="text/javascript" src="/common/js/kedi.newmain.js"></script>
+<!-- //2017-06-13 -->
+
+<!-- 2022-04-25 -->
+<script type="text/javascript" src="/common/js/slick.js"></script>
+<!-- //2022-04-25 -->
+
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/common/js/html5shiv.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+function menuAllControl(linkobj){
+	var img = jQuery(linkobj).find('img');
+	var imgSrc = jQuery(img).attr('src');
+	if(jQuery('.menuAll').is(":hidden")) {
+		jQuery(img).attr('src',imgSrc.replace('09.gif', '10.gif'));
+		jQuery('.menuAll').show();
+	} else {
+		jQuery(img).attr('src',imgSrc.replace('10.gif', '09.gif'));
+		jQuery('.menuAll').hide();
+	}
+}
+</script>
+
+
+</head>
+
+<body>
+<noscript><div id="noscript">현재 스크립트가 실행되지 않습니다. 일부 기능이 정상적으로 동작하지 않을 수 있습니다.</div></noscript>
+<!--[if lte ie 6]><div id="ie6">현재 사이트에서 지원하지 않는 구형 브라우저에서 접속하셨습니다. 일부 기능 및 모양이 정상적으로 보이지 않을 수 있습니다. 웹 브라우저를 업데이트하시길 권장합니다.</div><![endif]-->
+
+	<div id="wrap">
+
+		<!-- header -->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- header -->
+		<div id="skipNavi">
+			<a href="#content">본문 바로가기</a>
+			<a href="#footer">하단 바로가기</a>
+		</div>
+
+		<header id="header--wrap">
+			<!-- Header Util -->
+			<div class="header--util">
+				<div class="header--inner">
+					<h1 class="header--logo">
+						<a href="/khome/main/webhome/Home.do">
+							<img src="/images/renew/logo.png" alt="한국교육개발원(KOREAN EDUCATIONAL DEVELOPMENT INSTITUTE)">
+						</a>
+					</h1>
+					<div class="header--global">
+						<ul class="header--global__list">
+							
+									<li><a href="/khome/main/member/loginForm.do">로그인</a></li>
+									<li><a href="/khome/main/member/joinAgreeForm.do">회원가입</a></li>
+							
+							<li><a href="https://www.kedi.re.kr/eng/" target="_blank" title="영문 홈페이지 새창 열기">ENGLISH</a></li>
+							<li><a href="/khome/main/sitemap/sitemap.do">SITE MAP</a></li>
+						</ul>
+						<div class="header--global__search">
+							<a href="#header--search" class="btn--search" title="통합검색 열기">통합검색 열기</a>
+						</div>
+					</div>
+				</div>
+				<div id="header--search" class="header--search">
+					<div class="header--search__inside">
+						<form id="searchForm" name="searchForm" method="post" action="/khome/main/search/searchLst.do" onSubmit="return clickSearch();">
+							<h2><strong>통합</strong>검색</h2>
+							<div class="search--input">
+								<input type="hidden" name="page" value="1"/>
+					        	<input type="hidden" name="nList" value="3"/>
+					        	<input type="hidden" name="databaseList" value="research,journal,share,network,guide,announce,intro"/>
+					        	<input type="hidden" name="pageNo" value="1"/>
+								<input type="text" name="query"  id="query" title="검색어" placeholder="검색어를 입력해주세요" class="search--input__txt" value=""/>
+								<button type="submit" class="search--input__btn">검색하기</button>
+								<div class="search--input__favorite">
+									<div class="favorite__list">
+										<h3>인기검색어</h3>
+										<ul class="srchWordList">
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- //Header Util -->
+			
+			<!-- GNB -->
+			<div id="gnb--global">
+				<div class="gnb--global__inner">
+					<ul class="gnb--global__list">
+						<li>
+							<a href="#">KEDI 연구사업</a>
+							<ul class="gnb--global__submenu">
+								<li>
+									<a href="/khome/main/intro/listBusinessForm.do?rsPart=00">연구사업</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/listBusinessForm.do?rsPart=00">기본연구사업</a></li><!-- li에 class="active" 시 링크 강조 -->
+										<li><a href="/khome/main/intro/listBusinessForm.do?rsPart=01">수탁연구사업</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/research/listPubForm.do">연구자료</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/research/listPubForm.do">연구보고서</a></li>
+										<li><a href="/khome/main/research/kediBrief.do">KEDI Brief</a></li>
+										<li><a href="/khome/main/research/eduNavi.do">교육데이터 NAVIGATION</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/journal/listEDJournalForm.do">간행물</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/journal/listEDJournalForm.do">KJEP</a></li>
+										<li><a href="/khome/main/journal/listKDJournalForm.do">한국교육</a></li>
+										<li><a href="/khome/main/journal/listEDJournalForm.do">교육개발</a></li>
+										<li><a href="/khome/main/journal/listMZJournalForm.do">교육정책포럼</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/research/listSurveyDBNtcForm.do">조사자료</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/research/listSurveyDBNtcForm.do">조사자료 공지</a></li>
+										<li><a href="/khome/main/research/listSurveyDBFormNew.do">조사자료 목록</a></li>
+										<li><a href="/khome/main/research/requestResearchData.do">조사자료 신청</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/oecd/introOecdForm.do">OECD 교육정보</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/oecd/introOecdForm.do">OECD 소개</a></li>
+										<li><a href="/khome/main/oecd/listOecdNewsForm.do">OECD 활동</a></li>
+										<li><a href="/khome/main/oecd/listOecdBusinessForm.do">OECD 교육사업동향</a></li>
+										<li><a href="/khome/main/oecd/listOecdReportForm.do">OECD 발간물</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">알림마당</a>
+							<ul class="gnb--global__submenu">
+								<li>
+									<a href="/khome/main/announce/listNoticeAnnounceForm.do">공지사항</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/announce/listNoticeAnnounceForm.do">공지사항</a></li>
+										<li><a href="/khome/main/announce/listBidAnnounceForm.do">입찰공고</a></li>
+										<li><a href="/khome/main/announce/listRecruitAnnounceForm.do">채용공고</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/intro/kedici.do">홍보</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/kedici.do">기관상징</a></li>
+										<li><a href="/khome/main/intro/brochure.do">브로슈어</a></li>
+										<li><a href="/khome/main/intro/listVideoForm.do">홍보영상</a></li>
+										<li><a href="/khome/main/intro/annualreport.do">연차보고서</a></li>
+										<li><a href="/khome/main/journal/webZineNewsForm.do">웹진/뉴스레터</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/announce/listBroadAnnounceForm.do">보도자료</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/announce/listBroadAnnounceForm.do">보도자료</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/announce/listSeminarForm.do">행사</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/announce/listSeminarForm.do">행사안내</a></li>
+										<li><a href="/khome/main/announce/listGalleryForm.do">행사갤러리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome">50주년</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome">50주년 홈페이지</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">참여마당</a>
+							<ul class="gnb--global__submenu">
+								<li>
+									<a href="/khome/main/guide/listQnaForm.do">QnA</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/guide/listQnaForm.do">QnA</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/share/researchPojectOffer/intro.do">정책제안</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/share/researchPojectOffer/intro.do">정책제안</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/guide/askVisit.do">견학신청</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/guide/askVisit.do">견학신청</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/intro/kediCert.do">퇴직자증명발급</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/kediCert.do">퇴직자증명발급</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/share/listCleanForm.do">신고센터</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/share/listCleanForm.do">클린신고센터</a></li>
+										<li><a href="/khome/main/share/listCleanForm.do">청탁등록센터</a></li>
+										<li><a href="/khome/main/share/listCleanForm.do">고충신고센터</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">KEDI 소개</a>
+							<ul class="gnb--global__submenu">
+								<li>
+									<a href="/khome/main/intro/greeting.do">기관소개</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/greeting.do">원장인사말</a></li>
+										<li><a href="/khome/main/intro/presidentProfile.do">원장약력</a></li>
+										<li><a href="/khome/main/intro/managementgoal.do">기관경영목표</a></li>
+										<li><a href="/khome/main/intro/successive.do">역대원장소개</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/intro/history.do">일반현황</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/history.do">설립목적 및 연혁</a></li>
+										<li><a href="/khome/main/intro/businessplan.do">사업계획</a></li>
+										<li><a href="/khome/main/intro/manageHumanright.do">인권경영</a></li>
+										<li><a href="/khome/main/intro/customerCharter.do">고객헌장</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/intro/organization.do">조직안내</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/organization.do">조직도</a></li>
+										<li><a href="/khome/main/intro/listStaffForm.do">직원검색</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/intro/map.do">찾아오시는길</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/map.do">찾아오시는길</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">정보공개</a>
+							<ul class="gnb--global__submenu">
+								<li>
+									<a href="/khome/main/infoRelease/infomationRelease.do">공공데이터 개방</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/infoRelease/infomationRelease.do">제도안내 및 관련규정</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/infoRelease/infomationProvision.do">정보공개청구</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/infoRelease/infomationProvision.do">제도안내 및 관련규정</a></li>
+										<li><a href="/khome/main/infoRelease/listInfoPublicationForm.do?func=1">행정정보공표</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/intro/officialnotice.do">경영공시</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/intro/officialnotice.do">경영공시</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/infoRelease/businessRealNameInfo.do">사업실명제</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/infoRelease/businessRealNameInfo.do">사업실명제</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="/khome/main/announce/listReportAnnounceForm.do">해외연수/출장보고서</a>
+									<ul class="gnb--global__child">
+										<li><a href="/khome/main/announce/listReportAnnounceForm.do">해외연수/출장보고서</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="active--bar"></div>
+				</div>
+			</div>
+			<!-- //GNB -->
+		</header>
+		<!-- // header -->
+
+	<script type="text/javascript">
+	/* <![CDATA[*/
+		jQuery('#header').ready(function(){
+			jQuery('#gnb ul li.depth1 ul').hide();
+			jQuery('#gnb ul li.depth1 a.title').bind('mouseenter focus',function(){
+				jQuery('#gnb ul li.depth1 a.on').removeClass('on').parent().find('>ul').hide();
+				jQuery(this).addClass('on').parent().find('>ul').show();
+			});
+
+			jQuery('#site_util_menu a').bind('focusin',function(){
+				jQuery('#gnb li.depth1 a.on').removeClass('on').parent().find('>ul').hide();
+			});
+
+			jQuery('#gnb').bind('mouseleave',function(){
+				jQuery('#gnb li.depth1 a.on').removeClass('on').parent().find('>ul').hide();
+			});
+		});
+
+	jQuery(document).ready(function(){
+		ls_bindQueryEvent();
+		jQuery('#container').bind('focusin',function(){
+			jQuery('#gnb li.depth1 a.on').removeClass('on').parent().find('>ul').hide();
+		});
+	});
+
+	/**
+     * 검색창에 이벤트 처리 부여
+     */
+    function ls_bindQueryEvent() {
+    	jQuery('#query').keydown(function(e) {
+    		var queryVal = jQuery('#query').val();	//검색창의  text
+
+    		if (e.keyCode == $.ui.keyCode.ENTER) {	//enter key in
+    			if (queryVal == null || queryVal.length==0) {	//validation - null
+    				alert('검색어를 입력하세요.');
+    				//jQuery('#query').focus();
+    				return false;
+    			}else{
+    			//var lsform = document.searchForm;	//검색폼
+    			///khome/main/search/searchLst.do
+
+    			//lsform.query.value = queryVal;	//검색어 세팅
+    			//lsform.submit();
+    			jQuery('#searchForm').attr('method','post');
+    			jQuery('#searchForm').attr('action','/khome/main/search/searchLst.do').submit();
+    			}
+    		}
+    	});
+    }
+
+	/**
+	 * button 을 눌렀을때, 입력창에서 enter-key 입력 이벤트 발생시킴
+	 * 인기검색어 중, 하나를 클릭했을때, 역시 동작함
+	 * @param txt 검색어
+	 */
+	function ls_clickSearch() {
+		var queryVal = jQuery('#query').val();
+		if (queryVal == null || queryVal.length==0) {	//validation - null
+			alert('검색어를 입력하세요.');
+			jQuery('#query').focus();
+			return;
+		}else{
+		//var lsform = document.searchForm;	//검색폼
+		///khome/main/search/searchLst.do
+		//lsform.query.value = queryVal;	//검색어 세팅
+		//lsform.submit();
+		jQuery('#searchForm').attr('method','post');
+		jQuery('#searchForm').attr('action','/khome/main/search/searchLst.do').submit();
+		}
+	}
+
+	
+//	------ 인기 검색어 가져오는 스크립트 시작 ------
+	var url= '/khome/main/search/popularTermData.do';
+	var today = new Date;
+	var firstDayOfWeek =
+		('0'+(today.getDate()-today.getDay())).slice(-2)+	//이 주의 첫째 요일의 날짜
+		'/'+
+		('0'+(today.getMonth()+1)).slice(-2)+				//month
+		'/'+
+		today.getFullYear();								//year
+	var nList = 10;
+	var param = 'nList='+nList+'&amp;fromTime='+firstDayOfWeek+'&amp;foldYN=Y';//+"&amp;mainYN=Y"
+
+	XHR(url, param, function(data){
+		$('.srchWordList').html(data);
+	});
+//	------ 인기 검색어 가져오는 스크립트 끝 ------
+
+	/* ]]> */
+	
+	//검색
+	function clickSearchPopular(text){
+ 	$('input[name=query]').val(text);
+ 	jQuery('#searchForm').submit();
+
+ 	return;
+	}
+	
+	function clickSearch(text) {
+    	var queryVal = $('input[name=query]').val();
+    	if (queryVal == null || queryVal.length==0)	{
+    		alert('검색어를 입력해주세요.');
+    		$('input[name=query]').focus();
+    		return false;
+    	}
+    	else if (queryVal == '박근혜') {
+    		alert('다른 검색어를 입력해주세요.');
+    		$('input[name=query]').val('검색어를 입력하세요');
+    		return false;
+    	}
+    	else
+    	return true;
+    }
+	
+	</script>
+		
+		<!-- //header -->
+
+		<div id="container" class="containerWrap bg_sub_visual07">
+
+			<div class="visualWrap">
+			</div>
+
+			<!--  wrap -->
+			<div class="contWrap">
+				<!-- container -->
+
+					<!-- subside -->
+						
+						<!-- subside_menu -->
+						
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//사이트 메뉴 현 위치 표기
+jQuery(document).ready(function(){
+	$("div.leftArea div.lnb ul li a").each(function (index, itm){
+		if($(itm).text().replace(/\s/gi, "") == $("div.locaNavi strong").text().replace(/\s/gi, "")){
+			//2depth인 경우
+			if(typeof $(itm).parent("li").parent("ul").attr("class") != "undefined" && $(itm).parent("li").parent("ul").attr("class").indexOf("depth2") > -1){
+				$(itm).parent("li").addClass("on");
+				$(itm).parent("li").parent("ul").parent("li").addClass("active");
+			}else{
+				$(itm).parent("li").addClass("active");
+			}
+		}
+	});
+});
+
+</script>
+<!-- leftArea -->
+<div class="leftArea">
+	<h2 class="subTit">KEDI 연구사업</h2>
+	<div class="lnb">
+		<ul>
+			<li>
+				<a href="/khome/main/intro/listBusinessForm.do?rsPart=00">연구사업</a>
+				<ul class="depth2">
+					<li><a href="/khome/main/intro/listBusinessForm.do?rsPart=00">기본연구사업</a></li>
+					<li><a href="/khome/main/intro/listBusinessForm.do?rsPart=01">수탁연구사업</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/khome/main/research/listPubForm.do">연구자료</a>
+				<ul class="depth2">
+					<li><a href="/khome/main/research/listPubForm.do">연구보고서</a></li>
+					<li><a href="/khome/main/research/kediBrief.do">KEDI Brief</a></li>
+					<li><a href="/khome/main/research/eduNavi.do">교육데이터 NAVIGATION</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/khome/main/journal/listEJJournalForm.do">간행물</a>
+				<ul class="depth2">
+					<li><a href="/khome/main/journal/listEJJournalForm.do">KJEP</a></li>
+					<li><a href="/khome/main/journal/listKDJournalForm.do">한국교육</a></li>
+					<li><a href="/khome/main/journal/listEDJournalForm.do">교육개발</a></li>
+					<li><a href="/khome/main/journal/listMZJournalForm.do">교육정책포럼</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/khome/main/research/listSurveyDBNtcForm.do">조사자료</a>
+				<ul class="depth2">
+					<li><a href="/khome/main/research/listSurveyDBNtcForm.do" title="현재 페이지">조사자료 공지</a></li>
+					<li><a href="/khome/main/research/listSurveyDBFormNew.do">조사자료 목록</a></li>
+					<li><a href="/khome/main/research/requestResearchData.do">조사자료 신청</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/khome/main/oecd/introOecdForm.do">OECD 교육정보</a>
+				<ul class="depth2">
+					<li><a href="/khome/main/oecd/introOecdForm.do" title="현재 페이지">OECD 소개</a></li>
+					<li><a href="/khome/main/oecd/listOecdNewsForm.do">OECD 활동</a></li>
+					<li><a href="/khome/main/oecd/listOecdBusinessForm.do">OECD 교육사업 동향</a></li>
+					<li><a href="/khome/main/oecd/listOecdReportForm.do">OECD 발간물</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- // leftArea -->
+						<!-- //subside_menu -->
+
+						<!-- subside_banner -->
+						
+
+
+
+
+
+
+
+
+
+
+
+
+						<!-- //subside_banner -->
+					<!-- //subside -->
+
+					<!-- contents -->
+					
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="rightArea">
+	<div id="content" class="contBody">
+
+		<div class="locaNavi clearfix">
+			<span><img src="/images/content/ico_location_home.gif" class="vam" alt="홈" /></span>
+			<span>KEDI 연구사업</span>
+			<span>연구자료</span>
+			<strong>교육데이터 NAVIGATION</strong>
+		</div>
+		<h3 class="contTit">교육데이터 NAVIGATION</h3>
+		
+		<!-- 교육데이터 NAVIGATION -->
+		<div class="eduNav">
+			<!-- 교육통계 서비스 -->
+			<div class="eduNav__section">
+				<h4 class="eduNav__tit">교육통계서비스</h4>
+				<ul>
+					<li>
+						<a href="https://kess.kedi.re.kr" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/publ/list?itemCode=02&survSeq=&menuSeq=0&division=&word=" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스 <br>교육통계연보
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/contents/dataset?itemCode=04&menuId=m_02_04_03_02" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>학교/학과별 데이터셋
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/content/mainreq/posts?itemCode=04&menuId=m_02_04_03_01" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>주제별 공개 데이터
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/frontPop/requestAgree" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>자료요청
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //교육통계 서비스 -->
+			<!-- 조사자료 -->
+			<div class="eduNav__section">
+				<h4 class="eduNav__tit">조사자료</h4>
+				<ul>
+					<li>
+						<a href="https://www.kedi.re.kr/khome/main/research/selectSurveyDBFormNewAll.do?lqSequ=114 " target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_document.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								한국교육종단연구 <br>2013
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.kedi.re.kr/khome/main/research/selectSurveyDBFormNewAll.do?lqSequ=115" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_document.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								한국교육종단연구 <br>2005
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.kedi.re.kr/khome/main/research/selectSurveyDBFormNewAll.do?lqSequ=113 " target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_document.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								학교교육 실태 및 <br>수준 분석
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.kedi.re.kr/khome/main/research/selectSurveyDBFormNewAll.do?lqSequ=110" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_document.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육과 <br>사회계층이동 조사
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.kedi.re.kr/khome/main/research/selectSurveyDBFormNewAll.do?lqSequ=111 " target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_document.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								평생학습 <br>개인실태조사
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //조사자료 -->
+			<!-- 현황통계 / 자료 -->
+			<div class="eduNav__section">
+				<h4 class="eduNav__tit">현황통계 / 자료</h4>
+				<ul>
+					<li>
+						<a href="https://ged.kedi.re.kr" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_ged.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								영재교육<br>종합데이터베이스
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.afterschool.go.kr/" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_afterschool.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								방과후학교<br>포털시스템
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.hub4u.or.kr/usr/portal/board/146/commonBbsMain.do?cmkey=11164" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_hub4u.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								탈북청소년<br>교육지원센터
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.wee.go.kr/home/cms/cmsCont.do?cntnts_sn=22" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_wee.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								위(Wee) 프로젝트,<br>우리가 희망이다.
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //현황통계 / 자료 -->
+			<!-- 주요지표/통계로 보는 이슈 -->
+			<div class="eduNav__section">
+				<h4 class="eduNav__tit">주요지표/통계로 보는 이슈</h4>
+				<ul>
+					<li>
+						<a href="https://edpolicy.kedi.re.kr/frt/boardList.do?strCurMenuId=10105" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_edpolicy.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육정책네트워크<br>정보센터교육통계
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/content/issue/posts?itemCode=03&menuId=m_02_03_03" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>이슈통계
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/kessTheme/zipyo?itemCode=03&menuId=m_02_03_01" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>주요지표
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/kessTheme/webzine?itemCode=03&menuId=m_02_03_04" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>시계열통계
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //주요지표/통계로 보는 이슈 -->
+			<!-- 유관기관 교육 데이터 -->
+			<div class="eduNav__section">
+				<h4 class="eduNav__tit">유관기관 교육 데이터</h4>
+				<ul>
+					<li>
+						<a href="https://kess.kedi.re.kr/post/1014603?itemCode=06&menuId=m_02_06_03" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>해외통계관련사이트
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/post/1012774?itemCode=06&menuId=m_02_06_02" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>국내통계관련사이트
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://kess.kedi.re.kr/post/2111307?itemCode=06&menuId=m_02_06_01" target="_blank" title="새창">
+							<div class="eduNav__thumb">
+								<img src="/images/eduNav/logo_kess.png" alt="">
+							</div>
+							<div class="eduNav__txt">
+								교육통계서비스<br>교육관련사이트
+							</div>
+							<div class="eduNav__more">
+								<span>더보기</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //유관기관 교육 데이터 -->
+		</div>
+		<!-- // 교육데이터 NAVIGATION -->
+		
+	</div>
+</div>
+					<!-- //contents -->
+
+				<!-- //container -->
+
+				<!-- quickmenu -->
+				<div id="aside">
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- // Quick Menu -->
+				<div class="quick--menu sub" style="top:38px !important; ">
+					<h2 class="quick--title">Quick<br>Menu</h2>
+					<ul class="quick--list">
+						<li class="list__item list__01">
+							<a href="/khome#">50주년</a>
+						</li>
+						<li class="list__item list__02">
+							<a href="/khome/main/guide/listQnaForm.do">QnA</a>
+						</li>
+						<li class="list__item list__03">
+							<a href="https://www.kedi.re.kr/eng/kedi/member/user/forLogin.do?menuNo=200075" target="_blank">논문접수<br>(KJEP)</a>
+						</li>
+						<li class="list__item list__04">
+							<a href="/khome/main/journal/infoThesisAccept.do">논문접수<br>(한국교육)</a>
+						</li>
+						<li class="list__item list__05">
+							<a href="/khome/main/announce/listRecruitAnnounceForm.do">채용공고</a>
+						</li>
+						<li class="list__item list__06">
+							<a href="/khome/main/intro/kediCert.do">퇴직자<br>증명발급</a>
+						</li>
+					</ul>
+					<a href="#wrap" class="quick--top" title="최상단으로 이동">Top</a>
+				</div>
+				
+
+</div>
+				<!-- //quickmenu -->
+
+			</div>
+			<!-- //wrap -->
+		</div>
+			<!-- footer -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<!--[if IE 6]><script type="text/javascript">try{document.execCommand('BackgroundImageCache',false,true);}catch(me){}</script><![endif]-->
+	<!--  script type="text/javascript">
+	/**
+	* footer 관련사이트바로가기
+	*/
+	function site_related(url){
+		window.open(url,'relationsite','width=580, height=450, status=no, scrollbars=no');
+	}
+	</script -->
+
+<script type="text/javascript">
+<!--
+	$(document).ready(function() {
+		$(document).on("keydown", "input[name='srchKwd']", function(event) {
+			//console.log("직원이름: " + $("input[name='srchKwd']").val());
+			console.log("직원이름: " + $(this).val());
+		});
+	});
+
+//-->
+</script>
+
+	<div id="footer--wrap">
+			<div class="footer--link">
+				<ul class="footer--link__list">
+					<li><a href="/khome/main/guide/useHomepage.do">이용안내</a></li>
+					<li><a href="/khome/main/sitepolicy/privateInfo.do">개인정보처리방침</a></li>
+					<li><a href="/khome/main/sitepolicy/imageInfo.do">영상정보처리기기 운영&middot;관리방침</a></li>
+					<li><a href="/khome/main/sitepolicy/intellectualInfo.do">지식재산권보호</a></li>
+					<li><a href="/khome/main/sitepolicy/refusalInfo.do">이메일주소무단수집거부</a></li>
+					<li><a href="http://as82.kr/kedi" target="_blank" title="새창 열기">원격지원</a></li>
+					<li><a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="새창 열기">웹접근성안내</a></li>
+				</ul>
+			</div>
+			<div class="footer--info">
+				<div class="footer--info__inner">
+					<ul class="footer--info__social">
+						<li class="facebook">
+							<a href="http://www.facebook.com/KEDIPR" target="_blank" title="새창 열기">한국교육개발원 페이스북(Facebook)</a>
+						</li>
+						<li class="instagram">
+							<a href="https://www.instagram.com/iam_kedi_/" target="_blank" title="새창 열기">한국교육개발원 인스타그램(Instagram)</a>
+						</li>
+						<li class="youtube">
+							<a href="https://www.youtube.com/channel/UCVn6qUx895Jg-qY-0QWm2EQ/www.kedi.re.kr" target="_blank" title="새창 열기">한국교육개발원 유투브(YouTube)</a>
+						</li>
+					</ul>
+					<div class="footer--info__logo">
+						<img src="/images/renew/logo_footer.png" alt="한국교육개발원(KOREAN EDUCATIONAL DEVELOPMENT INSTITUTE)">
+					</div>
+					<div class="footer--info__addr">
+						<address class="addr">27873 충청북도 진천군 덕산읍 교학로 7(한국교육개발원)</address>
+						<p class="contact">
+							대표전화 : 043-530-9114 / 팩스 : 043-530-9819 / 이메일 : webmaster@kedi.re.kr
+							<a href="http://webwatch.or.kr/certification/situation.html" target="_blank" title="새창 열기" class="a11y">
+								<img src="/images/renew/logo_accessibility.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)">
+							</a>
+						</p>
+						<p class="copyright">COPYRIGHT &copy; 2017 KEDI All right reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Footer -->
+
+			<!--  //footer 	-->
+
+	<!-- LOGGER TRACKING SCRIPT V.31 FOR www.kedi.re.kr / 1001 : FAIL-SAFE TYPE / DO NOT ALTER THIS SCRIPT. -->
+<!-- COPYRIGHT (C) 2002-2021 BIZSPRING INC. LOGGER(TM) ALL RIGHTS RESERVED. -->
+<script language="JavaScript">/* LOGGER TRACKING SCRIPT V.31 : 1001 *//*X*//* COPYRIGHT 2002-2021 BIZSPRING INC. *//*X*//* DO NOT MODIFY THIS SCRIPT. *//*X*/var _TRK_DOMAIN="logger.kedi.re.kr";var _trk_bMSIE=(document.all)?true:false;var _trk_bJS12=(window.screen)?true:false;function _trk_escape(_str) { var str, ch; var bEncURI = "N"; eval("try{bEncURI=encodeURI('Y');}catch(_e){ }" ); if( bEncURI == "Y" ) str=encodeURI(_str); else str = escape(_str); str=str.split("+").join("%2B"); str=str.split("/").join("%2F"); str=str.split("&").join("%26"); str=str.split("?").join("%3F"); str=str.split(":").join("%3A"); str=str.split("#").join("%23"); return str;}function _trk_setCookie(name,value,expire) { var today=new Date(); today.setTime(today.getTime()+ expire ); document.cookie=name+"="+value+"; path=/; expires="+today.toGMTString()+";";}function _trk_getCookie(name) { var cookieName=name+"="; var x=0; while(x<=document.cookie.length) { var y=(x+cookieName.length); if(document.cookie.substring(x,y)==cookieName) {  if((endOfCookie=document.cookie.indexOf(";",y))==-1) endOfCookie=document.cookie.length;  return unescape(document.cookie.substring(y,endOfCookie)); } x=document.cookie.indexOf(" ",x)+1; if(x == 0) break; } return "";}function _trk_getParameter(name) { var paraName=name+"="; var URL=""+self.document.location.search; var tURL=""; eval("try{ tURL=top.document.location.search; }catch(_e){}"); URL=URL+"&"+tURL; if(URL.indexOf(paraName)!=-1) { var x=URL.indexOf(paraName)+paraName.length; var y=URL.substr(x).indexOf("&"); if(y!=-1) return URL.substring(x,x+y); else return URL.substr(x); } return "";}function _trk_make_code(_TRK_SERVER,_TRK_U) { var dt=document.title.toString(); dt=dt.substr(0,128); var dr=self.document.referrer; var tdr=""; eval("try{ tdr=top.document.referrer; }catch(_e){}"); var tdu=""; eval("try{ tdu=top.document.location.href; }catch(_e){}"); var bFrm=false; if(dr==tdu) { dr=tdr; bFrm=true; } if(dr=="undefined") dr=""; var du=self.document.location.href; if(du.substr(0,4)=="file") return ""; var adKeyVal = ""; if(bFrm) { adKeyVal=_trk_getParameter("OVKEY"); if(adKeyVal!="" && du.indexOf("OVKEY=")<0) {  if(du.indexOf("?")!=-1) du=du+"&OVKEY="+adKeyVal; else du=du+"?OVKEY="+adKeyVal;  adKeyVal=_trk_getParameter("OVRAW");  if(adKeyVal!="" && du.indexOf("OVRAW=")<0 ) if(du.indexOf("?")!=-1) du=du+"&OVRAW="+adKeyVal; else du=du+"?OVRAW="+adKeyVal; } else {  adKeyVal=_trk_getParameter("netpia");  if(adKeyVal!="" && du.indexOf("netpia=")<0 ) if(du.indexOf("?")!=-1) du=du+"&netpia="+adKeyVal; else du=du+"?netpia="+adKeyVal; } adKeyVal=_trk_getParameter("logger_kw"); if(adKeyVal!="" && du.indexOf("logger_kw=")<0 )  if(du.indexOf("?")!=-1) du=du+"&logger_kw="+adKeyVal; else du=du+"?logger_kw="+adKeyVal; adKeyVal=_trk_getParameter("source"); if(adKeyVal!="" && du.indexOf("source=")<0 )  if(du.indexOf("?")!=-1) du=du+"&source="+adKeyVal; else du=du+"?source="+adKeyVal; adKeyVal=_trk_getParameter("keywd"); if(adKeyVal!="" && du.indexOf("keywd=")<0 )  if(du.indexOf("?")!=-1) du=du+"&keywd="+adKeyVal; else du=du+"?keywd="+adKeyVal; adKeyVal=_trk_getParameter("NVADID"); if(adKeyVal!="" && du.indexOf("NVADID=")<0 )  if(du.indexOf("?")!=-1) du=du+"&NVADID="+adKeyVal; else du=du+"?NVADID="+adKeyVal; adKeyVal=_trk_getParameter("NVAR"); if(adKeyVal!="" && du.indexOf("NVAR=")<0 )  if(du.indexOf("?")!=-1) du=du+"&NVAR="+adKeyVal; else du=du+"?NVAR="+adKeyVal; adKeyVal=_trk_getParameter("NVADKWD");  if(adKeyVal!="" && du.indexOf("NVADKWD=")<0)  if(du.indexOf("?")!=-1) du=du+"&NVADKWD="+adKeyVal; else du=du+"?NVADKWD="+adKeyVal;  adKeyVal=_trk_getParameter("NVKWD");  if(adKeyVal!="" && du.indexOf("NVKWD=")<0 )  if(du.indexOf("?")!=-1) du=du+"&NVKWD="+adKeyVal; else du=du+"?NVKWD="+adKeyVal;   adKeyVal=_trk_getParameter("DWIT");  if(adKeyVal!="" && du.indexOf("DWIT=")<0) if(du.indexOf("?")!=-1) du=du+"&DWIT="+adKeyVal; else du=du+"?DWIT="+adKeyVal;  adKeyVal=_trk_getParameter("DWIC");  if(adKeyVal!="" && du.indexOf("DWIC=")<0 )  if(du.indexOf("?")!=-1) du=du+"&DWIC="+adKeyVal; else du=du+"?DWIC="+adKeyVal;  adKeyVal=_trk_getParameter("gad"); if(adKeyVal!="" && du.indexOf("gad=")<0 )  if(du.indexOf("?")!=-1) du=du+"&gad="+adKeyVal; else du=du+"?gad="+adKeyVal; adKeyVal=_trk_getParameter("gclid"); if(adKeyVal!="" && du.indexOf("gclid=")<0 )  if(du.indexOf("?")!=-1) du=du+"&gclid="+adKeyVal; else du=du+"?gclid="+adKeyVal; adKeyVal=_trk_getParameter("gkw"); if(adKeyVal!="" && du.indexOf("gkw=")<0 )  if(du.indexOf("?")!=-1) du=du+"&gkw="+adKeyVal; else du=du+"?gkw="+adKeyVal; adKeyVal=_trk_getParameter("rcsite"); if(adKeyVal!="" && du.indexOf("rcsite=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rcsite="+adKeyVal; else du=du+"?rcsite="+adKeyVal; adKeyVal=_trk_getParameter("rctype"); if(adKeyVal!="" && du.indexOf("rctype=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rctype="+adKeyVal; else du=du+"?rctype="+adKeyVal; adKeyVal=_trk_getParameter("rc_code"); if(adKeyVal!="" && du.indexOf("rc_code=")<0 )  if(du.indexOf("?")!=-1) du=du+"&rc_code="+adKeyVal; else du=du+"?rc_code="+adKeyVal; adKeyVal=_trk_getParameter("_C_"); if(adKeyVal!="" && du.indexOf("_C_=")<0 )  if(du.indexOf("?")!=-1) du=du+"&_C_="+adKeyVal; else du=du+"?_C_="+adKeyVal; } var ce=navigator.cookieEnabled?"Y":"N"; var je=navigator.javaEnabled()?"Y":"N"; var ss=""; var cd = ""; if(_trk_bJS12) { ss=screen.width+"x"+screen.height; cd=screen.colorDepth; } if(!dt) dt=""; if(!dr) dr=""; if(!du) du=""; if(!ce) ce=""; if(!je) je=""; var t = new Date; var tye=(_trk_bMSIE)?(t.getYear()):(t.getFullYear()); var tmo=t.getMonth()+1; var tda=t.getDate(); var tho=t.getHours(); var tmi=t.getMinutes(); var tse=t.getSeconds(); var tzo=t.getTimezoneOffset(); var tc = ""; var prtcl="https://"; if(prtcl=="https://") _TRK_SERVER=_TRK_DOMAIN; tc=tc+prtcl+_TRK_SERVER; var bPNF=((typeof _TRK_PI)!="undefined" && _TRK_PI=="PNF")?true:false; if(bPNF) tc=tc+"/tracker_click.tsp"; else tc=tc+"/tracker.tsp"; tc=tc+"?u="+_TRK_U+"&XU=&EXEN="+_EXEN; if(bPNF) { tc=tc+"&rnd="+Math.random()+"&CKFL="+_TRK_PI+"&CKDATA="+_trk_escape(du); } else { tc=tc+"&dr="+_trk_escape(dr)+"&XDR="+"&dt="+_trk_escape(dt)+"&du="+_trk_escape(du); if((typeof _TRK_CP)!="undefined" && _TRK_CP!="") tc=tc+"&CP="+_trk_escape(_TRK_CP)+"&XCP="; if((typeof _TRK_PI)!="undefined" && _TRK_PI!="") tc=tc+"&PI="+_TRK_PI; if((typeof _TRK_PN)!="undefined" && _TRK_PN!="") tc=tc+"&PN="+_trk_escape(_TRK_PN); if((typeof _TRK_MF)!="undefined" && _TRK_MF!="") tc=tc+"&MF="+_trk_escape(_TRK_MF); if((typeof _TRK_OA)!="undefined" && _TRK_OA!="") tc=tc+"&OA="+_TRK_OA; if((typeof _TRK_OP)!="undefined" && _TRK_OP!="") tc=tc+"&OP="+_trk_escape(_TRK_OP); if((typeof _TRK_OE)!="undefined" && _TRK_OE!="") tc=tc+"&OE="+_TRK_OE; if((typeof _TRK_CC)!="undefined" && _TRK_CC!="") tc=tc+"&CC="+_TRK_CC; if((typeof _TRK_RK)!="undefined" && _TRK_RK!="") tc=tc+"&RK="+_trk_escape(_TRK_RK); if((typeof _TRK_SX)!="undefined" && _TRK_SX!="") tc=tc+"&SX="+_TRK_SX; if((typeof _TRK_AG)!="undefined" && _TRK_AG!="") tc=tc+"&AG="+_TRK_AG; if((typeof _TRK_IK)!="undefined" && _TRK_IK!="") tc=tc+"&IK="+_trk_escape(_TRK_IK); tc=tc+"&js=Y"+"&ss="+escape(ss)+"&cd="+cd+"&ce="+ce+"&je="+je+"&tzo="+tzo+"&tye="+tye+"&tmo="+tmo+"&tda="+tda+"&tho="+tho+"&tmi="+tmi+"&tse="+tse; } return tc;}var _TRK_LIFE=_trk_getParameter("_L_");if(_TRK_LIFE=="") _TRK_LIFE=14;_TRK_LIFE = parseInt(_TRK_LIFE)*24*60*60*1000;var _TRK_U="";var _TRK_U_P=_trk_getParameter("_U_");var _TRK_U_C= _trk_getCookie("_TRK_U");if(_TRK_U_C!="") _TRK_U=_TRK_U_C;if(_TRK_U_P!="") _TRK_U=_TRK_U_P;if(_TRK_U!="" && _TRK_U_P!="") _trk_setCookie("_TRK_U",_TRK_U,_TRK_LIFE);var _TRK_CC_C=_trk_getCookie("_TRK_CC");var _TRK_CC_P=_trk_getParameter("_C_");if((typeof _TRK_CC)!="undefined" && _TRK_CC!="") _TRK_CC_P=_TRK_CC;if(_TRK_CC_C!="") _TRK_CC=_TRK_CC_C;if(_TRK_CC_P!="") _TRK_CC=_TRK_CC_P;if((typeof _TRK_CC)!="undefined" && _TRK_CC!="" && _TRK_CC_P!="") _trk_setCookie("_TRK_CC",_TRK_CC,_TRK_LIFE);var _TRK_RK_C=_trk_getCookie("_TRK_RK");var _TRK_RK_P=_trk_getParameter("_R_");if((typeof _TRK_RK)!="undefined" && _TRK_RK!="") _TRK_RK_P=_TRK_RK;if(_TRK_RK_C!="") _TRK_RK=_TRK_RK_C;if(_TRK_RK_P!="") _TRK_RK=_TRK_RK_P;if((typeof _TRK_RK)!="undefined" && _TRK_RK!="" && _TRK_RK_P!="") _trk_setCookie("_TRK_RK",_TRK_RK,_TRK_LIFE);var _SS_LIFE = 30*60*1000;var _EXEN = _trk_getCookie("_EXEN");if( _EXEN == "" ) _EXEN = 0; _EXEN ++;_trk_setCookie("_EXEN",_EXEN,_SS_LIFE);var _trk_code_base=_trk_make_code("logger.kedi.re.kr","1001");var _trk_code_chan="";if(_TRK_U!="") _trk_code_chan=_trk_code_base.replace(/\?u=1001&XU=/g,"?u="+_TRK_U+"&XU=");var _trk_img_base=new Image();var _trk_img_chan=new Image();var _trk_img_base_click=new Image();var _trk_img_chan_click=new Image();if(_trk_bJS12==true) { if(_trk_bMSIE) { _trk_img_base.src=_trk_code_base; if(_TRK_U!="") _trk_img_chan.src=_trk_code_chan; } else { setTimeout("_trk_img_base.src=_trk_code_base;",1); if(_TRK_U!="") setTimeout("_trk_img_chan.src=_trk_code_chan;",1); }} else { if(_trk_bMSIE) document.write('<div style=\"display: none\">'); document.write('<img src=\"'+_trk_code_base+'\" height=\"0\" width=\"0\">'); if(_TRK_U!="") document.write('<img src=\"'+_trk_code_chan+'\" height=\"0\" width=\"0\">'); if(_trk_bMSIE) document.write('</div>');}function _trk_flashEnvView(env1,env2,env3,env4,env5,env6,env7,env8,env9,env10,env11,env12){ var _trk_code_flash=_trk_code_base; for (var envCnt=1; envCnt< 13; envCnt++){ if((eval("env"+envCnt) != "") && (typeof eval("env"+envCnt) != "undefined" )){  var trk_str  = eval("env"+envCnt) ;  if(trk_str.indexOf("_TRK_CP")>=0){   var trk_cp = trk_str.split('=');   var _TRK_CP = trk_cp[1];   _trk_code_flash=_trk_code_flash.replace(/&CP=.*&XCP=/g,"&XCP=");   _trk_code_flash=_trk_code_flash.replace(/&dr=.*&XDR=/g,"&XDR=");   _trk_code_flash=_trk_code_flash+"&dr=&CP="+_trk_escape(_TRK_CP)+"&rnd="+Math.random();   if(_TRK_U!="") {    _trk_code_flash=_trk_code_flash.replace(/\?u=1001&XU=/g,"?u="+_TRK_U+"&XU=");   }  }  if((trk_str.indexOf("_TRK_PN")>=0) || (trk_str.indexOf("_TRK_MF")>=0) || (trk_str.indexOf("_TRK_RK")>=0) || (trk_str.indexOf("_TRK_OP")>=0) || (trk_str.indexOf("_TRK_IK")>=0)){   var trk_env = trk_str.split('=');   var _TRK_ENV = _trk_escape(trk_env[1]);   var tkr_env_name = trk_str.substring(trk_str.indexOf('_',1)+1,trk_str.lastIndexOf('='));   var _trk_envs = "&"+tkr_env_name+"="+ _TRK_ENV;   if( _trk_code_flash.indexOf("&"+tkr_env_name+"=") > 0) {    var regVal = "\&"+tkr_env_name+"\=(.*)(\&PN\=|\&MF\=|\&OA\=|\&OP\=|\&OE\=|\&CC\=|\&RK\=|\&SX\=|\&AG\=|\&IK\=|\&js\=)";    var envReg = new RegExp(regVal, 'gi');    var envRst = _trk_code_flash.match(envReg);    var envRst = envRst.toString();    var envArr = envRst.split('&');    var envVar = envArr[1];    _trk_code_flash=_trk_code_flash.replace("&"+envVar+"&", _trk_envs);   }else{    _trk_code_flash = _trk_code_flash+"&"+tkr_env_name+"="+_TRK_ENV;   }  }  if((trk_str.indexOf("_TRK_PI")>=0) || (trk_str.indexOf("_TRK_OA")>=0) || (trk_str.indexOf("_TRK_OE")>=0) || (trk_str.indexOf("_TRK_CC")>=0) || (trk_str.indexOf("_TRK_SX")>=0) || (trk_str.indexOf("_TRK_AG")>=0)){   var trk_env = trk_str.split('=');   var _TRK_ENV = trk_env[1];   var tkr_env_name = trk_str.substring(trk_str.indexOf('_',1)+1,trk_str.lastIndexOf('='));   var _trk_envs = "&"+tkr_env_name+"="+_TRK_ENV+"&";   if( _trk_code_flash.indexOf("&"+tkr_env_name+"=") > 0) {    var regVal = "\&"+tkr_env_name+"\=(.*)(\&PN\=|\&MF\=|\&OA\=|\&OP\=|\&OE\=|\&CC\=|\&RK\=|\&SX\=|\&AG\=|\&IK\=|\&js\=)";    var envReg = new RegExp(regVal, 'gi');    var envRst = _trk_code_flash.match(envReg);    var envRst = envRst.toString();    var envArr = envRst.split('&');    var envVar = envArr[1];    _trk_code_flash=_trk_code_flash.replace("&"+envVar+"&", _trk_envs);   }else{    _trk_code_flash = _trk_code_flash+"&"+tkr_env_name+"="+_TRK_ENV;   }  } } } _trk_img_base_click.src=_trk_code_flash ;}function _trk_flashContentsView(_TRK_PI, _TRK_CP) { var _trk_code_flash=_trk_code_base; var _trk_piv = "&PI="+_TRK_PI+"&"; _trk_code_flash=_trk_code_flash.replace(/&CP=.*&XCP=/g,"&XCP="); _trk_code_flash=_trk_code_flash.replace(/&dr=.*&XDR=/g,"&XDR="); if( _trk_code_flash.indexOf("&PI=") > 0) { var regVal = "\&PI\=(.*)(\&PN\=|\&MF\=|\&OA\=|\&OP\=|\&OE\=|\&CC\=|\&RK\=|\&SX\=|\&AG\=|\&IK\=|\&js\=)"; var envReg = new RegExp(regVal, 'gi'); var envRst = _trk_code_flash.match(envReg); var envRst = envRst.toString(); var envArr = envRst.split('&'); var envVar = envArr[1]; _trk_code_flash=_trk_code_flash.replace("&"+envVar+"&", _trk_piv ); }else{ _trk_code_flash = _trk_code_flash+"&PI="+_TRK_PI; } _trk_img_base_click.src=_trk_code_flash+"&dr=&CP="+_trk_escape(_TRK_CP)+"&rnd="+Math.random(); if(_TRK_U!="") { _trk_code_flash=_trk_code_flash.replace(/\?u=1001&XU=/g,"?u="+_TRK_U+"&XU="); _trk_img_chan_click.src=_trk_code_flash+"&dr=&CP="+_trk_escape(_TRK_CP)+"&rnd="+Math.random(); }}function _trk_clickTrace(_TRK_CKFL,_TRK_CKDATA) { var _trk_code_click=_trk_code_base.substr(0,_trk_code_base.indexOf("tracker.tsp")); _trk_code_click=_trk_code_click+"tracker_click.tsp?rnd="+Math.random()+"&CKFL="+_TRK_CKFL+"&CKDATA="+_trk_escape(_TRK_CKDATA); _trk_img_base_click.src=_trk_code_click+"&u=1001"; if(_TRK_U!="") _trk_img_chan_click.src=_trk_code_click+"&u="+_TRK_U;}function _trk_adClick( adSvr, svcCode, adCode ) { var ac = ""; var prtcl="https://"; if(prtcl=="https://") adSvr=_TRK_DOMAIN; ac=ac+prtcl+adSvr; _trk_img_base_click.src=ac+"/tracker_ad.tsp?u="+svcCode+"&mode=C&adCode="+adCode;}</script>
+<noscript><img src="http://logger.kedi.re.kr/tracker.tsp?u=1001&js=N" width=0 height=0/></noscript>
+<!-- END OF LOGGER TRACKING SCRIPT -->
+
+
+	</div>
+
+</body>
+<!--  2012-10-23 published by osh(emp86@) -->
+</html>
